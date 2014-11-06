@@ -11,19 +11,22 @@
 
    <?php 
      	if (isset($_POST["submit"])){
-     		if (isset($_POST ["username"]) && isset(isset($_POST ["sex"])){
+     		if (null !==($_POST ["username"]) && isset($_POST ["sex"])){
 		    		$username = $_POST["username"];
 		    		$sex = $_POST["sex"];
-		    		echo "Tere "  $username "! Tundub, et olete " $sex ".";
+		    		/*echo "Tere "  $username "! Tundub, et olete " $sex ".";*/ 
+		    		echo "Variant 1";
 		    	}
 		    	else {
-		    		if (isset($_POST ["username"]){
+		    		if (isset($_POST ["username"])) {
 		    			$username = $_POST["username"];
-		    			echo "Tere "  $username "! Palun minge tagasi ja valige sugu.";				
+		    			/*echo "Tere "  $username "! Palun minge tagasi ja valige sugu.";*/		
+		    			echo "Variant 2";		
 		    		}
-		    		elseif (isset($_POST ["sex"])){
+		    		elseif (isset($_POST ["sex"])) and (null ==($_POST ["username"]) {
 		    				$sex = $_POST["sex"];
-		    				echo "Tundub, et olete " $sex ", kuid palun minge tagasi ja sisestage nimi.";
+		    				/*echo "Tundub, et olete " $sex ", kuid palun minge tagasi ja sisestage nimi.";*/
+		    				echo "Variant 3";
 		    			}
 		    			else
 		    				echo "Palun minge tagasi ja täitke väljad.";
@@ -32,14 +35,7 @@
      		else
 	    		echo "Tundub, et sattusid siia otseteed pidi.";
 
-      ?>
-     ?>
-
-    
-
- 		
-
-      ?>
+            ?>
       
 
 
