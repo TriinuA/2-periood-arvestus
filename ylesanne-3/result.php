@@ -9,24 +9,24 @@
     <!-- Kustuta see funktsioon (print_r() koos <pre> elemendiga) pärast seda, kui oled veendunud, et programm töötab. -->
     <pre><?php print_r($_POST); ?></pre>
 
+    <!--elseif (3333333333 )koodiplokk ei käivitu ja ma ei suuda viga leida-->
    <?php 
      	if (isset($_POST["submit"])){
-     		if (null !==($_POST ["username"]) && isset($_POST ["sex"])){
-		    		$username = $_POST["username"];
-		    		$sex = $_POST["sex"];
-		    		/*echo "Tere "  $username "! Tundub, et olete " $sex ".";*/ 
-		    		echo "Variant 1";
+     		if (isset($_POST ["username"]) && isset($_POST ["sex"])){
+    				
+		    		echo "Tere {$_POST['username']}! Tundub, et olete {$_POST['sex']}.";
+		    		echo 11111111;
 		    	}
 		    	else {
-		    		if (isset($_POST ["username"])) {
+		    		if (isset($_POST ["username"]) && !isset($_POST ["sex"])) {
 		    			$username = $_POST["username"];
-		    			/*echo "Tere "  $username "! Palun minge tagasi ja valige sugu.";*/		
-		    			echo "Variant 2";		
+		    			echo "Tere {$_POST['username']} ! Palun minge tagasi ja valige sugu.";	
+		    			echo 222222222;
+ 					
 		    		}
-		    		elseif (isset($_POST ["sex"])) and (null ==($_POST ["username"]) {
-		    				$sex = $_POST["sex"];
-		    				/*echo "Tundub, et olete " $sex ", kuid palun minge tagasi ja sisestage nimi.";*/
-		    				echo "Variant 3";
+		    		elseif (isset($_POST ["sex"]) && !isset($_POST ["username"])) {
+		    				echo "Tundub, et olete  {$_POST ['sex']} , kuid palun minge tagasi ja sisestage nimi.";
+		    				echo 3333333333;
 		    			}
 		    			else
 		    				echo "Palun minge tagasi ja täitke väljad.";
