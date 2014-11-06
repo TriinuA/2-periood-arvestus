@@ -1,3 +1,8 @@
+<?php
+  header("Location: redirect.php");
+  exit;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
