@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>II perioodi arvestustöö - Ülesanne 2 - POST päring</title>
   </head>
-
   <body>
     <form action="result.php" method="post">
       <div class="form-field">

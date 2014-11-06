@@ -15,12 +15,12 @@
 		    		echo "Tere {$_POST['username']}! Tundub, et olete {$_POST['sex']}.";
 		    	}
 		    	else {
-		    		if (isset($_POST ["username"]) && !isset($_POST ["sex"])) {
+		    		if (isset($_POST ["username"]) && !isset($_POST ["sex"]) && ($_POST ["username"]) !=="" ) {
 		    			$username = $_POST["username"];
 		    			echo "Tere {$_POST['username']} ! Palun minge tagasi ja valige sugu.";	
  					
 		    		}
-		    		elseif (isset($_POST ["sex"]) &&  ($_POST ["username"]) =="") {
+		    		elseif (isset($_POST ["sex"]) &&  ($_POST ["username"]) =="" ) {
 		    				echo "Tundub, et olete  {$_POST ['sex']} , kuid palun minge tagasi ja sisestage nimi.";
 		    			}
 		    			else
