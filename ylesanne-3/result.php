@@ -12,21 +12,18 @@
     <!--elseif (3333333333 )koodiplokk ei käivitu ja ma ei suuda viga leida-->
    <?php 
      	if (isset($_POST["submit"])){
-     		if (isset($_POST ["username"]) && isset($_POST ["sex"])){
+     		if (isset($_POST ["username"]) && ($_POST ["username"]) !==""  && isset($_POST ["sex"])){
     				
 		    		echo "Tere {$_POST['username']}! Tundub, et olete {$_POST['sex']}.";
-		    		echo 11111111;
 		    	}
 		    	else {
-		    		if (isset($_POST ["username"]) && !isset($_POST ["sex"])) {
+		    		if (isset($_POST ["username"]) && ($_POST ["username"]) !=="" && !isset($_POST ["sex"])) {
 		    			$username = $_POST["username"];
 		    			echo "Tere {$_POST['username']} ! Palun minge tagasi ja valige sugu.";	
-		    			echo 222222222;
  					
 		    		}
-		    		elseif (isset($_POST ["sex"]) && !isset($_POST ["username"])) {
+		    		elseif (isset($_POST ["sex"]) &&  ($_POST ["username"]) =="") {
 		    				echo "Tundub, et olete  {$_POST ['sex']} , kuid palun minge tagasi ja sisestage nimi.";
-		    				echo 3333333333;
 		    			}
 		    			else
 		    				echo "Palun minge tagasi ja täitke väljad.";
